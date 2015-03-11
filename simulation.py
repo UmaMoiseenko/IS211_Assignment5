@@ -61,15 +61,12 @@ class Request:
 
 
 def simulateOneServer(filename):
-    print filename
-
     myServer = Server(0)
     myQueue = Queue()
     waitingtimes = []
 
     for row in filename:
         numb_list.append(row[0])
-        print row[0]
         request = Request(row[0], row[2])
         myQueue.enqueue(request)
 
