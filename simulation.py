@@ -79,6 +79,7 @@ def simulateOneServer(filename):
         if (not server.busy()) and (not queue.isEmpty()):
             nextreq = Request(queue.dequeue())
             waitingtimes.append(nextreq.waitTime(nextreq))
+            #breaks after this line
             server.startNext(nextreq)
 
         server.tick()
